@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    tools:context="app.fresherpools.xpertscan.Activity.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/data_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/multiWaveHeader">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.scwang.wave.MultiWaveHeader
+            android:id="@+id/multiWaveHeader"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleY="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:mwhCloseColor="@color/colorAccent"
+            app:mwhColorAlpha="0.45"
+            app:mwhGradientAngle="45"
+            app:mwhIsRunning="true"
+            app:mwhProgress="1"
+            app:mwhStartColor="@color/colorPrimary"
+            app:mwhVelocity="5"
+            app:mwhWaveHeight="50dp"
+            app:mwhWaves="MultiWave">
+
+        </com.scwang.wave.MultiWaveHeader>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/multiWaveHeader"
+            app:layout_constraintTop_toTopOf="@+id/multiWaveHeader"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:srcCompat="@drawable/indian_flag" />
+
+        <ImageView
+            android:id="@+id/support"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:srcCompat="@drawable/support" />
+
+        <LinearLayout
+            android:id="@+id/floating_icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:id="@+id/animate"
+                android:translationY="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/documents"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_marginStart="6dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="15sp"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/main_menu"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorAccent"
+                            android:clickable="true"
+                            android:focusable="true"
+                            app:fabCustomSize="35dp"
+                            android:elevation="0dp"
+                            app:elevation="0dp"
+                            app:maxImageSize="20dp"
+                            app:srcCompat="@drawable/docs"
+                            tools:ignore="MissingConstraints" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="Gallery"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/galary"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:backgroundTint="@color/colorAccent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:fabCustomSize="35dp"
+                        android:elevation="0dp"
+                        app:elevation="0dp"
+                        app:maxImageSize="20dp"
+                        app:srcCompat="@drawable/galary"
+                        tools:ignore="MissingConstraints" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Camera"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginEnd="6dp"
+                            android:layout_marginStart="6dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="15sp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/camera"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorAccent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:fabCustomSize="35dp"
+                        android:elevation="0dp"
+                        app:elevation="0dp"
+                        app:maxImageSize="20dp"
+                        app:srcCompat="@drawable/camera_capture"
+                        tools:ignore="MissingConstraints" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_menu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/colorFloat"
+                android:clickable="true"
+                android:focusable="true"
+                app:fabCustomSize="50dp"
+                app:maxImageSize="40dp"
+                app:srcCompat="@drawable/floating_expand"
+                app:elevation="0dp"
+                android:elevation="0dp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

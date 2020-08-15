@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|bottom"
+    tools:context="app.fresherpools.xpertscan.Activity.SplashActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:gravity="center"
+        android:textSize="23sp"
+        android:fontFamily="@font/bunya_regular"
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/from" />
+
+    <TextView
+        android:id="@+id/gradient_text"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/bunya_regular"
+        android:textColor="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fresherpools" />
+
+</LinearLayout>
